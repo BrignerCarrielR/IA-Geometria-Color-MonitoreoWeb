@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clasificador de Figuras y Colores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min copy.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <style>
+        .fixed-button {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-altura navbar-expand-lg  navbar-fixed-top ">
+        <div class="container-fluid">
+            <a class="navbar-brand text-center text-white fw-bold">Clasificador de Figuras y Colores</a>
+        </div>
+    </nav>
+    <div class="navbar-fixed-top subnavbar"></div>
+
+    <!-- contenido -->
+
+    <div class="row p-4">
+        <div class="col-sm-4 mb-3 mb-sm-0">
+            <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                <div class="card-body">
+                    <div class="border-start border-5 border-warning">
+                        <h3 class="m-3">
+                            <span class="fw-bold">
+                                <h4 class="fw-bold ">Figura detectada</h4>
+                                <h6 class="opacity-75">Muestra la figura detectada.</h6>
+                            </span>
+                        </h3>
+                    </div>
+
+                    <center>
+                        <div id="imagen" class="text-center">
+
+                        </div>
+                    </center>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-sm-8">
+            <div class="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
+                <div class="card-body">
+                    <div class="border-start border-5 border-warning">
+                        <h3 class="m-3">
+                            <span class="fw-bold">
+                                <h4 class="fw-bold ">Información</h4>
+                                <h6 class="opacity-75">Información relevante del sistema.</h6>
+                            </span>
+                        </h3>
+                    </div>
+                    <div class="row p-2">
+                        <div class="col-sm-4 mb-3 mb-sm-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="text-center fw-bold card-title">Triangulo</h5>
+                                    <center>
+                                        <img class="figuras" src="img/triangulo.png" alt="">
+                                    </center>
+                                    <hr>
+                                    <div class="circle mx-auto my-5" id="colorTriangulo"></div>
+                                    <div class="border-start border-5 border-warning">
+                                        <h3 class="m-3">
+                                            <span class="fw-bold">
+                                                <h6 class="opacity-75">Contador Triangulo
+                                                </h6>
+                                            </span>
+                                        </h3>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-auto">
+                                            <button id="ContTriRo" class="btn" style="background-color: red;">0</button>
+                                            <button id="ContTriVe" class="btn"
+                                                style="background-color: green;">0</button>
+                                            <button id="ContTriAm" class="btn"
+                                                style="background-color: yellow;">0</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="text-center fw-bold card-title">Circulo</h5>
+                                    <center>
+                                        <img class="figuras" src="img/circulo.png" alt="">
+                                    </center>
+                                    <hr>
+                                    <div class="circle mx-auto my-5" id="colorCirculo"></div>
+                                    <div class="border-start border-5 border-warning">
+                                        <h3 class="m-3">
+                                            <span class="fw-bold">
+                                                <h6 class="opacity-75">Contador Circulo
+                                                </h6>
+                                            </span>
+                                        </h3>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-auto">
+                                            <button id="ContCirRo" class="btn" style="background-color: red;">0</button>
+                                            <button id="ContCirVe" class="btn"
+                                                style="background-color: green;">0</button>
+                                            <button id="ContCirAm" class="btn"
+                                                style="background-color: yellow;">0</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="text-center fw-bold card-title">Cuadrado</h5>
+                                    <center>
+                                        <img class="figuras" src="img/cuadrado.png" alt="">
+                                    </center>
+                                    <hr>
+                                    <div class="containers">
+                                        <div class="circle mx-auto my-5" id="colorCuadrado"></div>
+                                    </div>
+                                    <div class="border-start border-5 border-warning">
+                                        <h3 class="m-3">
+                                            <span class="fw-bold">
+                                                <h6 class="opacity-75">Contador Cuadrado
+                                                </h6>
+                                            </span>
+                                        </h3>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-auto">
+                                            <button id="ContCuaRo" class="btn" style="background-color: red;">0</button>
+                                            <button id="ContCuaVe" class="btn"
+                                                style="background-color: green;">0</button>
+                                            <button id="ContCuaAm" class="btn"
+                                                style="background-color: yellow;">0</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Botón flotante -->
+    <div class="fixed-button">
+        <a type="button" class="btn btn-warning rounded-pill" id="genPDF"
+            title="Actualiza la página para cargar los datos.">Generar PDF</a>
+    </div>
+
+
+
+    <footer class="text-center footer fixed-bottom text-lg-start">
+        <section class="d-flex justify-content-center justify-content-lg-between p-1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-11 text-center">
+                        <span class="fw-bold">Inteligencia Artificial</span> - Todos los derechos Reservados -
+                        ( Grupo#1 - Grupo#7 )
+                    </div>
+                    <div class="col">
+                        <div>
+                            <h5 class="fw-bold" id="reloj"></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+
+    <!-- Scripts de Bootstrap y otros si es necesario -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Conexion con la Base de datos Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+
+    <script src="js/proceso.js"></script>
+    <script src="js/reloj.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

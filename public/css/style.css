@@ -1,0 +1,43 @@
+body {
+    background-color: var(--bs-body-bg)
+}
+
+.footer {
+    background-color: #e4edf5;
+    height: auto;
+}
+
+.navbar {
+    height: 60px;
+    background-color: #1c3247;
+}
+
+.subnavbar {
+    height: 10px;
+    background-color: #fe9900;
+}
+
+.figura {
+    width: 70%;
+}
+
+.figuras {
+    width: 100px;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background: conic-gradient(red 0deg 120deg,
+            green 120deg 240deg,
+            yellow 240deg 360deg);
+    border-radius: 50%;
+    transition: transform 1s ease-in-out;
+    border: solid;
+}
+
+.input-group {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
